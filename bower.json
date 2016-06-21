@@ -1,0 +1,27 @@
+{
+  "name": "h-ui-file-editor",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Simon <simonxd@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ace-builds": "https://github.com/habemus/ace-builds.git",
+    "ace-emmet-core": "https://github.com/habemus/emmet-core.git"
+  },
+  "devDependencies": {
+    "Keypress": "^2.1.4",
+    "should": "^9.0.2",
+    "mocha": "^2.5.3"
+  }
+}

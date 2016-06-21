@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+
+    <style type="text/css">
+      body {
+        margin: 0 0;
+      }
+
+      #editor {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        height: 100vh;
+        width: 60vw;
+      }
+
+      #logs {
+        position: fixed;
+        top: 0;
+        left: 60vw;
+
+        height: 100vh;
+        width: 40vw;
+
+        background-color: #efefef;
+
+        overflow: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="editor"></div>
+    <div id="logs"></div>
+
+    <!-- dependencies -->
+    <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
+    <script src="../bower_components/ace-builds/src-noconflict/ext-language_tools.js"></script>
+    <script src="../bower_components/ace-builds/src-noconflict/ext-emmet.js"></script>
+    <script src="../bower_components/ace-emmet-core/emmet.js"></script>
+    <!-- dependencies -->
+
+    <!-- for demo purposes -->
+    <script src="../bower_components/Keypress/keypress.js"></script>
+    <script src="./demo.js"></script>
+  </body>
+
+</html>
