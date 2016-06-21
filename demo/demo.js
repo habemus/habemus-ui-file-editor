@@ -15,6 +15,7 @@ const FileEditor = require('../lib');
 const ELEMENTS = {
   editor: document.querySelector('#editor'),
   logs: document.querySelector('#logs'),
+  fileSelector: document.querySelector('#file')
 };
 
 /**
@@ -38,7 +39,7 @@ var hfs = {
     };
 
     var pre = document.createElement('pre');
-    pre.innerHTML = JSON.stringify(ev, null, '\t');
+    pre.innerHTML = JSON.stringify(ev, null, '  ') + '\n--';
 
     ELEMENTS.logs.insertBefore(pre, ELEMENTS.logs.childNodes[0]);
   }
@@ -48,31 +49,40 @@ var hfs = {
  * Instantiate a FileEditor
  * @type {FileEditor}
  */
-var editor = new FileEditor({
-  ace: window.ace,
-  element: ELEMENTS.editor,
-  hfs: hfs,
-});
+var fileEditor = new FileEditor(window.ace, ELEMENTS.editor, hfs);
 
 // load the index.html file
-editor.load('index.html')
+fileEditor.load(ELEMENTS.fileSelector.value)
   .then(function () {
+    // clear the logs
     console.log('loaded');
   });
+
+
+///// CONTROLS
+
+// File selection
+ELEMENTS.fileSelector.addEventListener('change', function (e) {
+  fileEditor.load(ELEMENTS.fileSelector.value)
+    .then(function () {
+      ELEMENTS.logs.innerHTML = '';
+      console.log('loaded ' + ELEMENTS.fileSelector.value);
+    });
+});
 
 ////////////////////
 // setup Keypress //
 var listener = new window.keypress.Listener();
 
 listener.simple_combo('cmd s', function() {
-  editor.save()
+  fileEditor.save()
     .then(function () {
       console.log('saved');
     });
 });
 
 listener.simple_combo('ctrl s', function() {
-  editor.save()
+  fileEditor.save()
     .then(function () {
       console.log('saved');
     });

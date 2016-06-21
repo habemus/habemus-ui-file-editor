@@ -9,145 +9,71 @@
         margin: 0 0;
       }
 
-      #editor {
-        height: 100vh;
-        width: 100vw;
-      }
+      #control {
+        position: fixed;
 
-    </style>
-  </head>
-  <body>
-      
-    <dialog>
-        Dialog content
-    </dialog>
+        top: 0;
+        left: 0;
+        right: 0;
 
-    <div id="editor"></div>
+        height: 40px;
 
-    <script src="../bower_components/Keypress/keypress.js"></script>
-
-    <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
-
-    <script src="./demo.js"></script>
-  </body>
-
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <style type="text/css">
-      body {
-        margin: 0 0;
+        background-color: darkred;
       }
 
       #editor {
-        height: 100vh;
-        width: 100vw;
+        position: fixed;
+        top: 40px;
+        bottom: 0px;
+        left: 0px;
+
+        width: 60vw;
       }
 
-    </style>
-  </head>
-  <body>
+      #logs {
+        position: fixed;
 
-    <div id="editor"></div>
+        top: 40px;
+        bottom: 0px;
+        left: 60vw;
+        right: 0px;
 
-    <script src="../bower_components/Keypress/keypress.js"></script>
+        background-color: #efefef;
 
-    <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
+        overflow: auto;
 
-    <script src="./demo.js"></script>
-  </body>
-
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <style type="text/css">
-      body {
-        margin: 0 0;
+        padding: 40px 40px;
       }
 
-      #editor {
-        height: 100vh;
-        width: 100vw;
+      #logs > pre {
+        /* copied from github */
+        font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
       }
 
     </style>
   </head>
   <body>
 
-    <div id="editor"></div>
-
-    <script src="../bower_components/Keypress/keypress.js"></script>
-
-    <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
-
-    <script src="./demo.js"></script>
-  </body>
-
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <style type="text/css">
-      body {
-        margin: 0 0;
-      }
-
-      #editor {
-        height: 100vh;
-        width: 100vw;
-      }
-
-    </style>
-  </head>
-  <body>
+    <div id="control">
+      <select id="file">
+        <option value="index.html">index.html</option>
+        <option value="index.css">index.css</option>
+        <option value="index.js">index.js</option>
+      </select>
+    </div>
 
     <div id="editor"></div>
+    <div id="logs"></div>
 
-    <script src="../bower_components/Keypress/keypress.js"></script>
-
+    <!-- dependencies -->
     <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
+    <script src="../bower_components/ace-builds/src-noconflict/ext-language_tools.js"></script>
+    <script src="../bower_components/ace-builds/src-noconflict/ext-emmet.js"></script>
+    <script src="../bower_components/ace-emmet-core/emmet.js"></script>
+    <!-- dependencies -->
 
-    <script src="./demo.js"></script>
-  </body>
-
-</html>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-
-    <style type="text/css">
-      body {
-        margin: 0 0;
-      }
-
-      #editor {
-        height: 100vh;
-        width: 100vw;
-      }
-
-    </style>
-  </head>
-  <body>
-
-    <div id="editor"></div>
-
+    <!-- for demo purposes -->
     <script src="../bower_components/Keypress/keypress.js"></script>
-
-    <script src="../bower_components/ace-builds/src-noconflict/ace.js"></script>
-
     <script src="./demo.js"></script>
   </body>
 
