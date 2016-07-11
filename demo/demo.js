@@ -18,38 +18,29 @@ const ELEMENTS = {
   fileSelector: document.querySelector('#file')
 };
 
-/**
- * The virtual root fs,
- * rooted at __dirname /files
- * @type {vroor}
- */
-const projectFs = vroot(__dirname + '/files');
+// the hDev api
+var hDev = require('./h-dev');
 
 /**
- * The HFS API
- * @type {Object}
+ * Overwrite publish method so that we may log the published info
  */
-var hfs = {
-  readFile: Bluebird.promisify(projectFs.readFile.bind(projectFs)),
-  writeFile: Bluebird.promisify(projectFs.writeFile.bind(projectFs)),
-  publish: function (eventName, eventData) {
-    var ev = {
-      name: eventName,
-      data: eventData
-    };
+hDev.publish = function (eventName, eventData) {
+  var ev = {
+    name: eventName,
+    data: eventData
+  };
 
-    var pre = document.createElement('pre');
-    pre.innerHTML = JSON.stringify(ev, null, '  ') + '\n--';
+  var pre = document.createElement('pre');
+  pre.innerHTML = JSON.stringify(ev, null, '  ') + '\n--';
 
-    ELEMENTS.logs.insertBefore(pre, ELEMENTS.logs.childNodes[0]);
-  }
-}
+  ELEMENTS.logs.insertBefore(pre, ELEMENTS.logs.childNodes[0]);
+};
 
 /**
  * Instantiate a FileEditor
  * @type {FileEditor}
  */
-var fileEditor = new FileEditor(window.ace, ELEMENTS.editor, hfs);
+var fileEditor = new FileEditor(window.ace, ELEMENTS.editor, hDev);
 
 // load the index.html file
 fileEditor.load(ELEMENTS.fileSelector.value)
