@@ -14,9 +14,9 @@
     "browserify": "^13.0.1",
     "electron-prebuilt": "^1.2.3",
     "gulp": "^3.9.1",
+    "h-fs": "git+ssh://git@bitbucket.org/habemus-tutti/h-fs.git",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "vroot": "git+ssh://git@bitbucket.org/habemus-tutti/vroot.git"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "bluebird": "^3.4.1",

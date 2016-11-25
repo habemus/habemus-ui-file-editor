@@ -3,7 +3,6 @@ const fs   = require('fs');
 const path = require('path');
 
 // third-party dependencies
-const vroot = require('vroot');
 const Bluebird = require('bluebird');
 
 const FileEditor = require('../lib');
@@ -19,7 +18,7 @@ const ELEMENTS = {
 };
 
 // the hDev api
-var hDev = require('./h-dev');
+var hDev = require('./api/h-dev');
 
 /**
  * Overwrite publish method so that we may log the published info
