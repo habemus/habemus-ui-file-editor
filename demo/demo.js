@@ -45,7 +45,7 @@ var fileEditor = new FileEditor(window.ace, ELEMENTS.editor, hDev);
 fileEditor.load(ELEMENTS.fileSelector.value)
   .then(function () {
     // clear the logs
-    console.log('loaded');
+    // console.log('loaded');
   });
 
 

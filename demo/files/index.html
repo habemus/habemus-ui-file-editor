@@ -3,61 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-
-    <style type="text/css">
-      body {
-        margin: 0 0;
-      }
-
-      #control {
-        position: fixed;
-
-        top: 0;
-        left: 0;
-        right: 0;
-
-        height: 40px;
-
-        background-color: darkred;
-      }
-
-      #editor {
-        position: fixed;
-        top: 40px;
-        bottom: 0px;
-        left: 0px;
-
-        width: 60vw;
-      }
-
-      #logs {
-        position: fixed;
-
-        top: 40px;
-        bottom: 0px;
-        left: 60vw;
-        right: 0px;
-
-        background-color: #efefef;
-
-        overflow: auto;
-
-        padding: 40px 40px;
-      }
-
-      #logs > pre {
-        /* copied from github */
-        font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-      }
-
-    </style>
   </head>
   <body>
 
     <div id="control">
       <select id="file">
         <option value="/index.html">index.html</option>
-        <option value="/index.css">index.css</option>
+        <option value="/index.css" selected>index.css</option>
         <option value="/index.js">index.js</option>
       </select>
     </div>
