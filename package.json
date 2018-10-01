@@ -1,6 +1,6 @@
 {
-  "name": "hab-ui-file-editor",
-  "version": "0.0.0",
+  "name": "habemus-ui-file-editor",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
