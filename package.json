@@ -21,6 +21,9 @@
   "dependencies": {
     "bluebird": "^3.4.1",
     "css": "^2.2.1",
+    "domhandler": "^2.4.1",
+    "domutils": "^1.6.2",
+    "htmlparser2": "^3.9.2",
     "mime": "^1.3.4"
   }
 }
